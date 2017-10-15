@@ -1,0 +1,47 @@
+.mybackground{
+    background-color: #800000;
+    color: white;
+    opacity: 0.7;
+    text-align: center;
+    margin: 10px;
+    border-radius: 20px;
+        
+}
+.mybanner{
+    height: 150px;
+    background-image: url('banner1.jpg');
+    background-size: cover;
+}
+.myside{
+    background-color: #ffb0b0
+}
+.mymain{
+	background-color: #ffeaea
+}
+.myfooter{
+    text-align: center;
+    background-color: #640000;
+    color: white; 
+}
+.navbar-inverse{
+    margin-left: -15px;
+    margin-right: -15px;
+    background-color: #800000;
+    font-size: 20px;
+    font-weight: bold;
+    border-color: #800000;
+}
+.myrow{
+    overflow: hidden; 
+}
+
+.mycol{
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
+
+.myimgsize, .carousel-inner .item img{
+width: 100%; 
+height: 400px;
+}
+

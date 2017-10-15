@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Notice</h1>
+<form>
+<input type="text" name="si" value="{{ request.GET.si }}"/>
+<input type="Submit" value="Search">
+</form>
+<!-- <a href="{% url "ques_new" %}">Ask Question</a>
+ -->
+ <table class="table table-striped  table-responsive">
+<tr>
+     <th>Subject</th>
+     <th>Branch Name</th>
+     <th>Date</th>   
+    <th>Download</th>
+    </tr>
+    {% for n1 in object_list %}
+    <tr>
+     <td><a href="/health/{{n1.id}}">{{ n1.subject }}</a></td>
+     <td>{{ n1.branch.name }}</td>
+     <td>{{ n1.uploaded_at }}</td> 
+     {% if n1.attachment1 %}  
+     <td><a href="/media/{{n1.attachment1}}">download</a></td>
+     {% else %}
+     <td></td>
+      {% endif %}	
+    </tr>
+    {% endfor %}        
+    
+    {% for b1 in branch_list %}
+    	{{ b1.hod}}<br>
+    {% endfor %}        
+    
+</table>
+    {% for page in paginator.page_range %}
+    {% if forloop.counter != 1 %} | {% endif %}
+    <a href="?page={{ page }}">{{ page }}</a>
+	{% endfor %}
+{% endblock %}

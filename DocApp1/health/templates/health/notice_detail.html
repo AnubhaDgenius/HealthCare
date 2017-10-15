@@ -1,0 +1,18 @@
+<!-- todo change me -->
+{% extends "base.html" %}
+{% block content %}
+	<h1 class="mybackground">{{ object.subject }}</h1>
+    <table class="table table-striped  table-responsive">
+    <tr><th style="width: 40%">Subject</th><td>{{ object.subject }}</td></tr>    
+    <tr><th>Date</th><td>{{ object.uploaded_at }}</td></tr>    
+    <tr><th>Message</th><td>{{ object.message }}</td></tr>    
+    <tr><th>Branch</th><td>{{ object.branch.name }}</td></tr>    
+    <tr><th>HOD</th><td>{{ object.branch.hod }}</td></tr>    
+    <tr><th>Download</th><td><a href="/media/{{object.attachment1}}">{{object.attachment1}}</a></td></tr>        
+	</table>
+	<a href="/health/new_ques?nid={{ object.id }}">Ask Question</a><br>
+	<a href="/health/">Back</a>
+{% endblock %}
+
+
+
